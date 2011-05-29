@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<appconfig>
+	<dbType>MYSQL</dbType>
+	<driver>com.mysql.jdbc.Driver</driver>
+      	<jdbcConnectionString>jdbc:mysql://10.0.0.102/moose</jdbcConnectionString>
+	<databaseIP>10.0.0.102</databaseIP>
+	<databaseCatalog>moose</databaseCatalog>
+	<databaseUsername>moose</databaseUsername>
+	<databasePassword>whocares</databasePassword>
+	<sourceTarget>src/main/java/org/mraz/moose/data</sourceTarget>
+	<projectName>moose</projectName>
+	<topLevel>org.mraz</topLevel>
+	<libPath>libs</libPath>
+	<schemaStrategy>PARTIAL</schemaStrategy>
+</appconfig>
