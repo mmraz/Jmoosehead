@@ -1,32 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.mraz</groupId>
-  <artifactId>Jmoosehead</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-  <packaging>har</packaging>
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>net.sf.maven-har</groupId>
-        <artifactId>maven-har-plugin</artifactId>
-        <version>0.9</version>
-        <extensions>true</extensions>
-      </plugin>
-    </plugins>
-  </build>
-  <dependencies>
-	<dependency>
-	  <groupId>org.hibernate</groupId>
-	  <artifactId>hibernate-core</artifactId>
-	  <version>3.6.2.Final</version>
-	</dependency>
-  </dependencies>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.mraz.moose</groupId>
+	<artifactId>parent</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>Jmoosehead Parent POM</name>
+
+	<modules>
+		<module>dao</module>
+		<module>net</module>
+		<module>core</module>
+	</modules>
 </project>

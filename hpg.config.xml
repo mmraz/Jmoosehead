@@ -7,9 +7,18 @@
 	<databaseCatalog>moose</databaseCatalog>
 	<databaseUsername>moose</databaseUsername>
 	<databasePassword>whocares</databasePassword>
-	<sourceTarget>src/main/java/org/mraz/moose/data</sourceTarget>
-	<projectName>moose</projectName>
-	<topLevel>org.mraz</topLevel>
+	<sourceTarget>dao</sourceTarget>
+	<projectName>dao</projectName>
+	<topLevel>org.mraz.moose</topLevel>
 	<libPath>libs</libPath>
 	<schemaStrategy>PARTIAL</schemaStrategy>
+<maven enabled="true" artifactId="dao" groupId="org.mraz.moose" version="1.0.0-SNAPSHOT" name="Jmoosehead Data Access Objects">
+	<dependencies><![CDATA[
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate</artifactId>
+		<version>3.6.4.Final</version>
+	</dependency>]]>
+	</dependencies>
+</maven>
 </appconfig>
