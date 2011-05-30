@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2011 12:25:47 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.mraz.moose.PlayerGladiator" table="player_gladiator" catalog="moose">
+        <id name="playerId" type="java.lang.Integer">
+            <column name="PLAYER_ID" />
+            <generator class="foreign">
+                <param name="property">player</param>
+            </generator>
+        </id>
+        <one-to-one name="player" class="org.mraz.moose.Player" constrained="true"></one-to-one>
+        <property name="wins" type="int">
+            <column name="WINS" not-null="true" />
+        </property>
+        <property name="kills" type="int">
+            <column name="KILLS" not-null="true" />
+        </property>
+        <property name="teamWins" type="int">
+            <column name="TEAM_WINS" not-null="true" />
+        </property>
+        <property name="teamKills" type="int">
+            <column name="TEAM_KILLS" not-null="true" />
+        </property>
+        <property name="games" type="int">
+            <column name="GAMES" not-null="true" />
+        </property>
+        <property name="teamGames" type="int">
+            <column name="TEAM_GAMES" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

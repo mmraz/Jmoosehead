@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2011 12:25:47 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.mraz.moose.Attributes" table="attributes" catalog="moose">
+        <id name="ownerId" type="java.lang.Integer">
+            <column name="OWNER_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="isModifier" type="boolean">
+            <column name="IS_MODIFIER" not-null="true" />
+        </property>
+        <property name="strength" type="short">
+            <column name="STRENGTH" not-null="true" />
+        </property>
+        <property name="intelligence" type="short">
+            <column name="INTELLIGENCE" not-null="true" />
+        </property>
+        <property name="wisdom" type="short">
+            <column name="WISDOM" not-null="true" />
+        </property>
+        <property name="dexterity" type="short">
+            <column name="DEXTERITY" not-null="true" />
+        </property>
+        <property name="constitution" type="short">
+            <column name="CONSTITUTION" not-null="true" />
+        </property>
+        <property name="agility" type="short">
+            <column name="AGILITY" not-null="true" />
+        </property>
+        <property name="endurance" type="short">
+            <column name="ENDURANCE" not-null="true" />
+        </property>
+        <property name="social" type="short">
+            <column name="SOCIAL" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

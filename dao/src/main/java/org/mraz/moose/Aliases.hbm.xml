@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2011 12:25:47 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.mraz.moose.Aliases" table="aliases" catalog="moose">
+        <id name="playerId" type="java.lang.Integer">
+            <column name="PLAYER_ID" />
+            <generator class="foreign">
+                <param name="property">player</param>
+            </generator>
+        </id>
+        <one-to-one name="player" class="org.mraz.moose.Player" constrained="true"></one-to-one>
+        <property name="name" type="string">
+            <column name="NAME" length="20" not-null="true" />
+        </property>
+        <property name="value" type="string">
+            <column name="VALUE" length="2048" />
+        </property>
+    </class>
+</hibernate-mapping>

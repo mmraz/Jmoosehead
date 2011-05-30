@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="org.mraz.moose.util.SessionFactoryUtil">
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.autocommit">true</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">whocares</property>
+        <property name="hibernate.connection.url">jdbc:mysql://10.0.0.102:3306/moose</property>
+        <property name="hibernate.connection.username">moose</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.use_sql_comments">true</property>
+        <mapping resource="org/mraz/moose/Group.hbm.xml" />
+        <mapping resource="org/mraz/moose/GroupSkills.hbm.xml" />
+        <mapping resource="org/mraz/moose/PlayerSkills.hbm.xml" />
+        <mapping resource="org/mraz/moose/PlayerDeity.hbm.xml" />
+        <mapping resource="org/mraz/moose/PlayerGladiator.hbm.xml" />
+        <mapping resource="org/mraz/moose/PlayerStats.hbm.xml" />
+        <mapping resource="org/mraz/moose/PlayerLasts.hbm.xml" />
+        <mapping resource="org/mraz/moose/Attributes.hbm.xml" />
+        <mapping resource="org/mraz/moose/Races.hbm.xml" />
+        <mapping resource="org/mraz/moose/Player.hbm.xml" />
+        <mapping resource="org/mraz/moose/PlayerNotes.hbm.xml" />
+        <mapping resource="org/mraz/moose/SkillSpell.hbm.xml" />
+        <mapping resource="org/mraz/moose/Clans.hbm.xml" />
+        <mapping resource="org/mraz/moose/Aliases.hbm.xml" />
+        <mapping resource="org/mraz/moose/PlayerGroup.hbm.xml" />
+        <mapping resource="org/mraz/moose/Deity.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

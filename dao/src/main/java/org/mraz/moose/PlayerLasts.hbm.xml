@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2011 12:25:47 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.mraz.moose.PlayerLasts" table="player_lasts" catalog="moose">
+        <id name="playerId" type="timestamp">
+            <column name="PLAYER_ID" length="19" />
+            <generator class="foreign">
+                <param name="property">player</param>
+            </generator>
+        </id>
+        <one-to-one name="player" class="org.mraz.moose.Player" constrained="true"></one-to-one>
+        <property name="killedBy" type="timestamp">
+            <column name="KILLED_BY" length="19" not-null="true" />
+        </property>
+        <property name="killed" type="timestamp">
+            <column name="KILLED" length="19" not-null="true" />
+        </property>
+        <property name="attacked" type="timestamp">
+            <column name="ATTACKED" length="19" not-null="true" />
+        </property>
+        <property name="attackedBy" type="timestamp">
+            <column name="ATTACKED_BY" length="19" not-null="true" />
+        </property>
+        <property name="attackedByTimer" type="int">
+            <column name="ATTACKED_BY_TIMER" not-null="true" />
+        </property>
+        <property name="combat" type="timestamp">
+            <column name="COMBAT" length="19" not-null="true" />
+        </property>
+        <property name="killedDt" type="timestamp">
+            <column name="KILLED_DT" length="19" />
+        </property>
+        <property name="deathDt" type="timestamp">
+            <column name="DEATH_DT" length="19" />
+        </property>
+        <property name="login" type="timestamp">
+            <column name="LOGIN" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

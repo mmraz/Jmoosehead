@@ -13,6 +13,7 @@
 	<libPath>libs</libPath>
 	<schemaStrategy>PARTIAL</schemaStrategy>
 <maven enabled="true" artifactId="dao" groupId="org.mraz.moose" version="1.0.0-SNAPSHOT" name="Jmoosehead Data Access Objects">
+
 	<dependencies><![CDATA[
 	<dependency>
 		<groupId>org.hibernate</groupId>

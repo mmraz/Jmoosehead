@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2011 12:25:47 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.mraz.moose.PlayerSkills" table="player_skills" catalog="moose">
+        <id name="playerId" type="java.lang.Integer">
+            <column name="PLAYER_ID" />
+            <generator class="foreign">
+                <param name="property">player</param>
+            </generator>
+        </id>
+        <many-to-one name="skillSpell" class="org.mraz.moose.SkillSpell" fetch="select">
+            <column name="SN" not-null="true" />
+        </many-to-one>
+        <one-to-one name="player" class="org.mraz.moose.Player" constrained="true"></one-to-one>
+        <property name="learnedPercent" type="short">
+            <column name="LEARNED_PERCENT" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

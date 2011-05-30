@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2011 12:25:47 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.mraz.moose.GroupSkills" table="group_skills" catalog="moose">
+        <id name="groupId" type="int">
+            <column name="GROUP_ID" />
+            <generator class="foreign">
+                <param name="property">group</param>
+            </generator>
+        </id>
+        <many-to-one name="skillSpell" class="org.mraz.moose.SkillSpell" fetch="select">
+            <column name="SN" not-null="true" />
+        </many-to-one>
+        <one-to-one name="group" class="org.mraz.moose.Group" constrained="true"></one-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2011 12:25:47 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.mraz.moose.PlayerNotes" table="player_notes" catalog="moose">
+        <id name="playerId" type="java.lang.Integer">
+            <column name="PLAYER_ID" />
+            <generator class="foreign">
+                <param name="property">player</param>
+            </generator>
+        </id>
+        <one-to-one name="player" class="org.mraz.moose.Player" constrained="true"></one-to-one>
+        <property name="note" type="int">
+            <column name="NOTE" not-null="true" />
+        </property>
+        <property name="idea" type="int">
+            <column name="IDEA" not-null="true" />
+        </property>
+        <property name="penalty" type="int">
+            <column name="PENALTY" not-null="true" />
+        </property>
+        <property name="news" type="int">
+            <column name="NEWS" not-null="true" />
+        </property>
+        <property name="change" type="int">
+            <column name="CHANGE" not-null="true" />
+        </property>
+        <property name="ooc" type="int">
+            <column name="OOC" not-null="true" />
+        </property>
+        <property name="bug" type="int">
+            <column name="BUG" not-null="true" />
+        </property>
+        <property name="clan" type="int">
+            <column name="CLAN" not-null="true" />
+        </property>
+        <property name="immortal" type="int">
+            <column name="IMMORTAL" not-null="true" />
+        </property>
+        <property name="question" type="int">
+            <column name="QUESTION" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2011 12:25:47 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.mraz.moose.PlayerStats" table="player_stats" catalog="moose">
+        <id name="playerId" type="java.lang.Integer">
+            <column name="PLAYER_ID" />
+            <generator class="foreign">
+                <param name="property">player</param>
+            </generator>
+        </id>
+        <one-to-one name="player" class="org.mraz.moose.Player" constrained="true"></one-to-one>
+        <property name="hp" type="short">
+            <column name="HP" not-null="true" />
+        </property>
+        <property name="maxHp" type="short">
+            <column name="MAX_HP" not-null="true" />
+        </property>
+        <property name="mana" type="short">
+            <column name="MANA" not-null="true" />
+        </property>
+        <property name="maxMana" type="short">
+            <column name="MAX_MANA" not-null="true" />
+        </property>
+        <property name="move" type="short">
+            <column name="MOVE" not-null="true" />
+        </property>
+        <property name="maxMove" type="short">
+            <column name="MAX_MOVE" not-null="true" />
+        </property>
+        <property name="gold" type="int">
+            <column name="GOLD" not-null="true" />
+        </property>
+        <property name="silver" type="int">
+            <column name="SILVER" not-null="true" />
+        </property>
+        <property name="bank" type="int">
+            <column name="BANK" not-null="true" />
+        </property>
+        <property name="incognito" type="short">
+            <column name="INCOGNITO" not-null="true" />
+        </property>
+        <property name="invisible" type="short">
+            <column name="INVISIBLE" not-null="true" />
+        </property>
+        <property name="practice" type="short">
+            <column name="PRACTICE" not-null="true" />
+        </property>
+        <property name="training" type="short">
+            <column name="TRAINING" not-null="true" />
+        </property>
+        <property name="skill" type="short">
+            <column name="SKILL" not-null="true" />
+        </property>
+        <property name="savingThrow" type="short">
+            <column name="SAVING_THROW" not-null="true" />
+        </property>
+        <property name="alignment" type="int">
+            <column name="ALIGNMENT" not-null="true" />
+        </property>
+        <property name="hitroll" type="short">
+            <column name="HITROLL" not-null="true" />
+        </property>
+        <property name="damroll" type="short">
+            <column name="DAMROLL" not-null="true" />
+        </property>
+        <property name="secondHitroll" type="short">
+            <column name="SECOND_HITROLL" not-null="true" />
+        </property>
+        <property name="secondDamroll" type="short">
+            <column name="SECOND_DAMROLL" not-null="true" />
+        </property>
+        <property name="ac0" type="short">
+            <column name="AC0" not-null="true" />
+        </property>
+        <property name="ac1" type="short">
+            <column name="AC1" not-null="true" />
+        </property>
+        <property name="ac2" type="short">
+            <column name="AC2" not-null="true" />
+        </property>
+        <property name="ac3" type="short">
+            <column name="AC3" not-null="true" />
+        </property>
+        <property name="wimpy" type="short">
+            <column name="WIMPY" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

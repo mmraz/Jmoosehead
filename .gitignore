@@ -1,0 +1,12 @@
+velocity.log
+.project
+.classpath
+.settings/*
+dao/target
+dao/target/*
+net/target
+net/target/*
+core/target
+core/target/*
+target
+target/*

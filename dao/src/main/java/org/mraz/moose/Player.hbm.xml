@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2011 12:25:47 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.mraz.moose.Player" table="player" catalog="moose">
+        <id name="id" type="timestamp">
+            <column name="ID" length="19" />
+            <generator class="assigned" />
+        </id>
+        <version name="version" type="int">
+            <column name="VERSION" not-null="true" />
+        </version>
+        <property name="name" type="string">
+            <column name="NAME" length="20" not-null="true" />
+        </property>
+        <property name="surname" type="string">
+            <column name="SURNAME" length="45" />
+        </property>
+        <property name="title" type="string">
+            <column name="TITLE" length="80" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="80" />
+        </property>
+        <property name="shortDesc" type="string">
+            <column name="SHORT_DESC" length="80" />
+        </property>
+        <property name="longDesc" type="string">
+            <column name="LONG_DESC" length="4096" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="4096" />
+        </property>
+        <property name="raceId" type="int">
+            <column name="RACE_ID" not-null="true" />
+        </property>
+        <property name="clanId" type="java.lang.Integer">
+            <column name="CLAN_ID" />
+        </property>
+        <property name="gender" type="string">
+            <column name="GENDER" length="7" not-null="true" />
+        </property>
+        <property name="level" type="int">
+            <column name="LEVEL" not-null="true" />
+        </property>
+        <property name="trust" type="java.lang.Integer">
+            <column name="TRUST" />
+        </property>
+        <property name="played" type="int">
+            <column name="PLAYED" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="Password" length="45" not-null="true" />
+        </property>
+        <property name="bamfIn" type="string">
+            <column name="BAMF_IN" length="2048" />
+        </property>
+        <property name="bamfOut" type="string">
+            <column name="BAMF_OUT" length="2048" />
+        </property>
+        <property name="whoname" type="string">
+            <column name="WHONAME" length="20" />
+        </property>
+        <property name="trueGender" type="string">
+            <column name="TRUE_GENDER" length="6" />
+        </property>
+        <one-to-one name="aliases" class="org.mraz.moose.Aliases"></one-to-one>
+        <one-to-one name="playerLasts" class="org.mraz.moose.PlayerLasts"></one-to-one>
+        <one-to-one name="playerGladiator" class="org.mraz.moose.PlayerGladiator"></one-to-one>
+        <one-to-one name="playerNotes" class="org.mraz.moose.PlayerNotes"></one-to-one>
+        <one-to-one name="playerDeity" class="org.mraz.moose.PlayerDeity"></one-to-one>
+        <one-to-one name="playerStats" class="org.mraz.moose.PlayerStats"></one-to-one>
+        <one-to-one name="playerGroup" class="org.mraz.moose.PlayerGroup"></one-to-one>
+        <one-to-one name="playerSkills" class="org.mraz.moose.PlayerSkills"></one-to-one>
+    </class>
+</hibernate-mapping>

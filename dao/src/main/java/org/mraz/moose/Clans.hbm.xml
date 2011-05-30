@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2011 12:25:47 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.mraz.moose.Clans" table="clans" catalog="moose">
+        <id name="clanId" type="java.lang.Integer">
+            <column name="CLAN_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="45" not-null="true" />
+        </property>
+        <property name="whoName" type="string">
+            <column name="WHO_NAME" length="20" not-null="true" />
+        </property>
+        <property name="hallVnum" type="java.lang.Short">
+            <column name="HALL_VNUM" />
+        </property>
+        <property name="hidden" type="boolean">
+            <column name="HIDDEN" not-null="true" />
+        </property>
+        <property name="independent" type="boolean">
+            <column name="INDEPENDENT" not-null="true" />
+        </property>
+        <property name="pvp" type="boolean">
+            <column name="PVP" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2011 12:25:47 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.mraz.moose.Deity" table="deity" catalog="moose">
+        <id name="deityId" type="java.lang.Integer">
+            <column name="DEITY_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="45" not-null="true" />
+        </property>
+        <set name="playerDeities" table="player_deity" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DEITY_ID" not-null="true" />
+            </key>
+            <one-to-many class="org.mraz.moose.PlayerDeity" />
+        </set>
+    </class>
+</hibernate-mapping>
